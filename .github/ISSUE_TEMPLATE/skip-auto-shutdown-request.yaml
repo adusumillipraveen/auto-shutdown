@@ -2,13 +2,14 @@ name: '🌍 Skip auto shutdown'
 description: Request that an environment is not shutdown (automatically processed)
 body:
 - type: input
+  id: ticket-ref
   attributes:
     label: Change or Jira reference
   validations:
     required: true
 
 - type: dropdown
-  id: download
+  id: businessarea
   attributes:
     label: Business area
     options:
@@ -19,6 +20,7 @@ body:
     
 - type: dropdown
   id: Environment
+  id: environment
   attributes:
     label: Environment
     description: "If AAT / Staging then you may want to also select PTL for Jenkins and Preview / Dev if you need to do a pull request"
